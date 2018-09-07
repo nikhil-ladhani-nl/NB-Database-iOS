@@ -1,0 +1,6 @@
+framework module Pods_NB_DatabaseUITests {
+  umbrella header "Pods-NB DatabaseUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
