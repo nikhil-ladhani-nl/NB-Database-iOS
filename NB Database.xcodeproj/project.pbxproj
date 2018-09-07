@@ -17,11 +17,10 @@
 		3106CB0721423C3E00996736 /* NB_DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106CB0621423C3E00996736 /* NB_DatabaseTests.swift */; };
 		3106CB1221423C3E00996736 /* NB_DatabaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106CB1121423C3E00996736 /* NB_DatabaseUITests.swift */; };
 		31FBB5DF21424E9E007CEC09 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5DE21424E9E007CEC09 /* Characters.swift */; };
-		31FBB5E6214259E1007CEC09 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5E4214259E1007CEC09 /* CharacterViewController.swift */; };
-		31FBB5E7214259E1007CEC09 /* CharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31FBB5E5214259E1007CEC09 /* CharacterViewController.xib */; };
-		31FBB5EA21425A1B007CEC09 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5E821425A1B007CEC09 /* CharacterTableViewCell.swift */; };
-		31FBB5EB21425A1B007CEC09 /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31FBB5E921425A1B007CEC09 /* CharacterTableViewCell.xib */; };
 		31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */; };
+		31FBB5F6214282F4007CEC09 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */; };
+		31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */; };
+		31FBB5FC21428E8C007CEC09 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5FB21428E8C007CEC09 /* CharacterTableViewCell.swift */; };
 		B5C1BCFCA9F1031FF70DEB5B /* Pods_NB_DatabaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B68B8B83E62B96D3DE5F12A /* Pods_NB_DatabaseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,11 +60,10 @@
 		3106CB1321423C3E00996736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3190D0ED23027CF2C8F487E6 /* Pods-NB Database.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NB Database.release.xcconfig"; path = "Pods/Target Support Files/Pods-NB Database/Pods-NB Database.release.xcconfig"; sourceTree = "<group>"; };
 		31FBB5DE21424E9E007CEC09 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
-		31FBB5E4214259E1007CEC09 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
-		31FBB5E5214259E1007CEC09 /* CharacterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterViewController.xib; sourceTree = "<group>"; };
-		31FBB5E821425A1B007CEC09 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
-		31FBB5E921425A1B007CEC09 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailsViewController.swift; sourceTree = "<group>"; };
+		31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewController.swift; sourceTree = "<group>"; };
+		31FBB5FB21428E8C007CEC09 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		35FB8DBF6DAA63DD007B7C6A /* Pods_NB_Database.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NB_Database.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADB2F84EB4EE3475D4CB17A /* Pods-NB DatabaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NB DatabaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NB DatabaseTests/Pods-NB DatabaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B68B8B83E62B96D3DE5F12A /* Pods_NB_DatabaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NB_DatabaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,11 +131,10 @@
 				3106CAFD21423C3E00996736 /* Info.plist */,
 				3106CAF521423C3B00996736 /* NB_Database.xcdatamodeld */,
 				31FBB5DE21424E9E007CEC09 /* Characters.swift */,
-				31FBB5E821425A1B007CEC09 /* CharacterTableViewCell.swift */,
-				31FBB5E921425A1B007CEC09 /* CharacterTableViewCell.xib */,
-				31FBB5E4214259E1007CEC09 /* CharacterViewController.swift */,
-				31FBB5E5214259E1007CEC09 /* CharacterViewController.xib */,
 				31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */,
+				31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */,
+				31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */,
+				31FBB5FB21428E8C007CEC09 /* CharacterTableViewCell.swift */,
 			);
 			path = "NB Database";
 			sourceTree = "<group>";
@@ -291,9 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31FBB5E7214259E1007CEC09 /* CharacterViewController.xib in Resources */,
 				3106CAFC21423C3E00996736 /* LaunchScreen.storyboard in Resources */,
-				31FBB5EB21425A1B007CEC09 /* CharacterTableViewCell.xib in Resources */,
 				3106CAF921423C3E00996736 /* Assets.xcassets in Resources */,
 				3106CAF421423C3B00996736 /* Main.storyboard in Resources */,
 			);
@@ -398,9 +393,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3106CAF721423C3B00996736 /* NB_Database.xcdatamodeld in Sources */,
-				31FBB5E6214259E1007CEC09 /* CharacterViewController.swift in Sources */,
-				31FBB5EA21425A1B007CEC09 /* CharacterTableViewCell.swift in Sources */,
+				31FBB5FC21428E8C007CEC09 /* CharacterTableViewCell.swift in Sources */,
+				31FBB5F6214282F4007CEC09 /* MainPageViewController.swift in Sources */,
 				31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */,
+				31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */,
 				3106CAEF21423C3B00996736 /* AppDelegate.swift in Sources */,
 				31FBB5DF21424E9E007CEC09 /* Characters.swift in Sources */,
 			);

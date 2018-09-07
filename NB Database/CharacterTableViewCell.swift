@@ -11,9 +11,6 @@ import UIKit
 class CharacterTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var houseLabel: UILabel!
-    @IBOutlet weak var characterImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,5 +21,5 @@ class CharacterTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }
