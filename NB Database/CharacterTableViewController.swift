@@ -31,7 +31,7 @@ class CharacterTableViewController: UITableViewController {
                     print(json)
                     json.array?.forEach({
                         (character) in
-                        let character = Character(name: character["name"].stringValue, house:character["house"].stringValue,characterImage:character["image"].stringValue)
+                        let character = Character(name: character["name"].stringValue, house:character["house"].stringValue,image:character["image"].stringValue)
                         self.charactersData.append(character)
                     })
                     self.tableView.reloadData()
@@ -44,28 +44,28 @@ class CharacterTableViewController: UITableViewController {
     
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
         return charactersData.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath) as! CharacterTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharTableViewCell
         
-//        cell.nameLabel.text = "Name: " +  self.charactersData[indexPath.row].name
-//        cell.houseLabel.text = "House: " + self.charactersData[indexPath.row].house
-//
-//        if let imageURL = URL(string: self.charactersData[indexPath.row].characterImage) {
-//            DispatchQueue.global().async {
-//                let data = try? Data(contentsOf: imageURL)
-//                if let data = data {
-//                    let image = UIImage(data: data)
-//                    DispatchQueue.main.async {
-//                        cell.characterImageView.image = image
-//                    }
-//                }
-//            }
-//        }
+        cell.nameLabel.text = "Name: " +  charactersData[indexPath.row].name
+        cell.houseLabel.text = "House: " + charactersData[indexPath.row].house
+
+        if let imageURL = URL(string: self.charactersData[indexPath.row].image) {
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageURL)
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        cell.charImageView.image = image
+                    }
+                }
+            }
+        }
         return cell
     }
 

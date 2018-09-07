@@ -1,16 +1,18 @@
 //
-//  CharacterTableViewCell.swift
-//  NB Database
+//  CharTableViewCell.swift
+//  
 //
-//  Created by Nikhil on 7/09/18.
-//  Copyright © 2018 Nikhil. All rights reserved.
+//  Created by Nikhil on 8/09/18.
 //
 
 import UIKit
 
-class CharacterTableViewCell: UITableViewCell {
+class CharTableViewCell: UITableViewCell {
 
-    
+
+    @IBOutlet weak var charImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var houseLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

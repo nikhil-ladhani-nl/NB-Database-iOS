@@ -20,7 +20,7 @@
 		31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */; };
 		31FBB5F6214282F4007CEC09 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */; };
 		31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */; };
-		31FBB5FC21428E8C007CEC09 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5FB21428E8C007CEC09 /* CharacterTableViewCell.swift */; };
+		31FBB5FE2142A2AC007CEC09 /* CharTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5FD2142A2AC007CEC09 /* CharTableViewCell.swift */; };
 		B5C1BCFCA9F1031FF70DEB5B /* Pods_NB_DatabaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B68B8B83E62B96D3DE5F12A /* Pods_NB_DatabaseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +63,7 @@
 		31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailsViewController.swift; sourceTree = "<group>"; };
 		31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewController.swift; sourceTree = "<group>"; };
-		31FBB5FB21428E8C007CEC09 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		31FBB5FD2142A2AC007CEC09 /* CharTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharTableViewCell.swift; path = "/Users/nikhil/Desktop/NB-Database-iOS/NB Database/CharTableViewCell.swift"; sourceTree = "<absolute>"; };
 		35FB8DBF6DAA63DD007B7C6A /* Pods_NB_Database.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NB_Database.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADB2F84EB4EE3475D4CB17A /* Pods-NB DatabaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NB DatabaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NB DatabaseTests/Pods-NB DatabaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B68B8B83E62B96D3DE5F12A /* Pods_NB_DatabaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NB_DatabaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,8 +133,8 @@
 				31FBB5DE21424E9E007CEC09 /* Characters.swift */,
 				31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */,
 				31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */,
+				31FBB5FD2142A2AC007CEC09 /* CharTableViewCell.swift */,
 				31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */,
-				31FBB5FB21428E8C007CEC09 /* CharacterTableViewCell.swift */,
 			);
 			path = "NB Database";
 			sourceTree = "<group>";
@@ -393,8 +393,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3106CAF721423C3B00996736 /* NB_Database.xcdatamodeld in Sources */,
-				31FBB5FC21428E8C007CEC09 /* CharacterTableViewCell.swift in Sources */,
 				31FBB5F6214282F4007CEC09 /* MainPageViewController.swift in Sources */,
+				31FBB5FE2142A2AC007CEC09 /* CharTableViewCell.swift in Sources */,
 				31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */,
 				31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */,
 				3106CAEF21423C3B00996736 /* AppDelegate.swift in Sources */,

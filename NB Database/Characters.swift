@@ -8,10 +8,16 @@
 
 import Foundation
 
-struct Character
+class Character
 {
     var name : String
     var house : String
-    var characterImage : String
+    var image : String
     
+    init(name: String, house: String, image: String)
+    {
+        self.name = name
+        self.house = house
+        self.image = image
+    }
 }
