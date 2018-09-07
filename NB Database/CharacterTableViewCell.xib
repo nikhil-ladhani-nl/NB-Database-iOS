@@ -23,10 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="415" height="197.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MaM-eL-ncv">
-                                <rect key="frame" x="0.0" y="24" width="200" height="150"/>
+                                <rect key="frame" x="0.0" y="9" width="200" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="C9p-b1-oCd"/>
-                                    <constraint firstAttribute="height" constant="150" id="Lil-1h-hZh"/>
+                                    <constraint firstAttribute="height" constant="180" id="Lil-1h-hZh"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TbT-3R-LFN">

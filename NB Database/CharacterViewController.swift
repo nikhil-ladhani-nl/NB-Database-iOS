@@ -59,8 +59,8 @@ extension CharacterViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath) as! CharacterTableViewCell
         
-        cell.nameLabel.text = self.charactersData[indexPath.row].name
-        cell.houseLabel.text = self.charactersData[indexPath.row].house
+        cell.nameLabel.text = "Name: " +  self.charactersData[indexPath.row].name
+        cell.houseLabel.text = "House: " + self.charactersData[indexPath.row].house
         
         if let imageURL = URL(string: self.charactersData[indexPath.row].characterImage) {
                         DispatchQueue.global().async {
@@ -76,4 +76,12 @@ extension CharacterViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailsPage"
+        {
+            let navigation = segue.destination as? UINavigationController
+            let detailsViewPage = navigation!.topViewController as! CharDetailsViewController
+//            return self.detailsViewPage
+        }
+    }
 }
