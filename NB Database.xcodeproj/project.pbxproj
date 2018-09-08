@@ -20,8 +20,8 @@
 		31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */; };
 		31FBB5F6214282F4007CEC09 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */; };
 		31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */; };
-		31FBB5FE2142A2AC007CEC09 /* CharTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5FD2142A2AC007CEC09 /* CharTableViewCell.swift */; };
 		B5C1BCFCA9F1031FF70DEB5B /* Pods_NB_DatabaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B68B8B83E62B96D3DE5F12A /* Pods_NB_DatabaseUITests.framework */; };
+		F55B609B2143668300A7BC40 /* CharTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55B609A2143668300A7BC40 /* CharTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +63,12 @@
 		31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailsViewController.swift; sourceTree = "<group>"; };
 		31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewController.swift; sourceTree = "<group>"; };
-		31FBB5FD2142A2AC007CEC09 /* CharTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharTableViewCell.swift; path = "/Users/nikhil/Desktop/NB-Database-iOS/NB Database/CharTableViewCell.swift"; sourceTree = "<absolute>"; };
 		35FB8DBF6DAA63DD007B7C6A /* Pods_NB_Database.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NB_Database.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADB2F84EB4EE3475D4CB17A /* Pods-NB DatabaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NB DatabaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NB DatabaseTests/Pods-NB DatabaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B68B8B83E62B96D3DE5F12A /* Pods_NB_DatabaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NB_DatabaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEBDF603B76300502681B44 /* Pods-NB DatabaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NB DatabaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NB DatabaseUITests/Pods-NB DatabaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4AEBD14AF6DBB6DAC930E46 /* Pods-NB Database.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NB Database.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NB Database/Pods-NB Database.debug.xcconfig"; sourceTree = "<group>"; };
+		F55B609A2143668300A7BC40 /* CharTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +132,8 @@
 				3106CAF521423C3B00996736 /* NB_Database.xcdatamodeld */,
 				31FBB5DE21424E9E007CEC09 /* Characters.swift */,
 				31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */,
+				F55B609A2143668300A7BC40 /* CharTableViewCell.swift */,
 				31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */,
-				31FBB5FD2142A2AC007CEC09 /* CharTableViewCell.swift */,
 				31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */,
 			);
 			path = "NB Database";
@@ -394,7 +394,7 @@
 			files = (
 				3106CAF721423C3B00996736 /* NB_Database.xcdatamodeld in Sources */,
 				31FBB5F6214282F4007CEC09 /* MainPageViewController.swift in Sources */,
-				31FBB5FE2142A2AC007CEC09 /* CharTableViewCell.swift in Sources */,
+				F55B609B2143668300A7BC40 /* CharTableViewCell.swift in Sources */,
 				31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */,
 				31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */,
 				3106CAEF21423C3B00996736 /* AppDelegate.swift in Sources */,
