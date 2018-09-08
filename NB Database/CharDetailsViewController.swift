@@ -20,12 +20,26 @@ class CharDetailsViewController: UIViewController {
     var gender = String()
     var house = String()
     var ancestry = String()
+    var imageUrlString = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = getImage
         nameLabel.text! = name
         houseLabel.text! = house
+        
+        if let imageURL = URL(string: imageUrlString)
+        {
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageURL)
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        self.imageView.image = image
+                    }
+                }
+            }
+        }
 
         // Do any additional setup after loading the view.
     }

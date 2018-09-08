@@ -164,7 +164,7 @@
                                     <outlet property="charImageView" destination="CjF-zD-LOU" id="mlr-Uh-sVh"/>
                                     <outlet property="houseLabel" destination="YzW-ff-dXU" id="OD9-qX-fnP"/>
                                     <outlet property="nameLabel" destination="Rkd-t4-5kb" id="4sZ-XN-BDy"/>
-                                    <segue destination="LEA-EV-oUK" kind="show" trigger="accessoryAction" id="JGo-UB-Vdl"/>
+                                    <segue destination="LEA-EV-oUK" kind="show" identifier="DetailView" trigger="accessoryAction" id="JGo-UB-Vdl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

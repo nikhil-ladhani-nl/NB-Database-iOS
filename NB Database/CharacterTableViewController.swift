@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+
 class CharacterTableViewController: UITableViewController {
 
     var charactersData = [Character]()
@@ -51,10 +52,10 @@ class CharacterTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharTableViewCell
-        
+    
         cell.nameLabel.text = "Name: " +  charactersData[indexPath.row].name
         cell.houseLabel.text = "House: " + charactersData[indexPath.row].house
-
+        
         if let imageURL = URL(string: self.charactersData[indexPath.row].image) {
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: imageURL)
@@ -70,9 +71,7 @@ class CharacterTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let hpc = storyboard?.instantiateViewController(withIdentifier: "CharDetails") as? CharDetailsViewController
-        hpc?.getImage =  charactersData[indexPath.row].image as! UIImage
-        hpc?.name = charactersData[indexPath.row].name
-        hpc?.house = charactersData[indexPath.row].house
+        hpc?.imageUrlString = charactersData[indexPath.row].image
         self.navigationController?.pushViewController(hpc!, animated: true)
     }
 
