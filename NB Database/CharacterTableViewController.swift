@@ -31,7 +31,7 @@ class CharacterTableViewController: UITableViewController {
                     print(json)
                     json.array?.forEach({
                         (character) in
-                        let character = Character(name: character["name"].stringValue, house:character["house"].stringValue,image:character["image"].stringValue)
+                        let character = Character(name: character["name"].stringValue, house:character["house"].stringValue,image:character["image"].stringValue, gender: character["gender"].stringValue, ancestry: character["ancestry"].stringValue)
                         self.charactersData.append(character)
                     })
                     self.tableView.reloadData()
@@ -67,6 +67,13 @@ class CharacterTableViewController: UITableViewController {
             }
         }
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let hpc = storyboard?.instantiateViewController(withIdentifier: "CharDetails") as? CharDetailsViewController
+        hpc?.getImage =  charactersData[indexPath.row].image as! UIImage
+        hpc?.name = charactersData[indexPath.row].name
+        hpc?.house = charactersData[indexPath.row].house
+        self.navigationController?.pushViewController(hpc!, animated: true)
     }
 
 

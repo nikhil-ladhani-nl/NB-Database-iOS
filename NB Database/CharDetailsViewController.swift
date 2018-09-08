@@ -9,9 +9,23 @@
 import UIKit
 
 class CharDetailsViewController: UIViewController {
-
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var houseLabel: UILabel!
+    @IBOutlet weak var ancestryLabel: UILabel!
+    
+    var getImage = UIImage()
+    var name = String()
+    var gender = String()
+    var house = String()
+    var ancestry = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.image = getImage
+        nameLabel.text! = name
+        houseLabel.text! = house
 
         // Do any additional setup after loading the view.
     }
