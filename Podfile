@@ -8,6 +8,7 @@ target 'NB Database' do
   # Pods for NB Database
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'AlamofireImage', '~> 3.3'
 
   target 'NB DatabaseTests' do
     inherit! :search_paths
@@ -18,5 +19,6 @@ target 'NB Database' do
     inherit! :search_paths
     # Pods for testing
   end
+
 
 end
