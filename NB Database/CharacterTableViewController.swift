@@ -72,6 +72,8 @@ class CharacterTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let hpc = storyboard?.instantiateViewController(withIdentifier: "CharDetails") as? CharDetailsViewController
         hpc?.imageUrlString = charactersData[indexPath.row].image
+        hpc?.name = charactersData[indexPath.row].name
+        hpc?.house = charactersData[indexPath.row].house
         self.navigationController?.pushViewController(hpc!, animated: true)
     }
 
