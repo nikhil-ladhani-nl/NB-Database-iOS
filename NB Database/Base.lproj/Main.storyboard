@@ -26,11 +26,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqu-o7-Emf">
-                                <rect key="frame" x="128" y="318" width="118" height="30"/>
+                                <rect key="frame" x="134" y="318" width="107" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show Characters"/>
+                                <state key="normal" title="Add Characters"/>
                                 <connections>
                                     <segue destination="k3c-nV-qhH" kind="show" id="cum-wA-qWC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ytr-vn-dnn">
+                                <rect key="frame" x="104" y="395" width="167" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Existing Chracters"/>
+                                <connections>
+                                    <segue destination="HID-pN-LNH" kind="show" id="wHD-Sh-bro"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -42,6 +50,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NU-zY-4gY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1914.4000000000001" y="-439.43028485757122"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Oa9-nC-2Ow">
+            <objects>
+                <tableViewController id="HID-pN-LNH" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SpA-F4-eqL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dTR-19-fZY">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dTR-19-fZY" id="5fC-4e-5f1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HID-pN-LNH" id="Pae-FB-y6h"/>
+                            <outlet property="delegate" destination="HID-pN-LNH" id="IIB-d9-h6E"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMN-as-IpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="394"/>
         </scene>
         <!--Char Details View Controller-->
         <scene sceneID="gRU-k0-sEx">
@@ -57,33 +93,35 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tuc-qj-LOQ">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="286.5"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="C3p-2O-93q">
-                                        <rect key="frame" x="138.5" y="286.5" width="68.5" height="286.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C3p-2O-93q">
+                                        <rect key="frame" x="105.5" y="286.5" width="134" height="286.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fo-ag-RSH">
-                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="71.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="36.5" y="0.0" width="61.5" height="71.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXH-lO-kAd">
-                                                <rect key="frame" x="0.0" y="71.5" width="68.5" height="72"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ancestry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXH-lO-kAd">
+                                                <rect key="frame" x="33" y="71.5" width="68.5" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axV-9y-4oI">
-                                                <rect key="frame" x="0.0" y="143.5" width="68.5" height="71.5"/>
+                                                <rect key="frame" x="42.5" y="143.5" width="49.5" height="71.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ancestry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKG-iq-3MY">
-                                                <rect key="frame" x="0.0" y="215" width="68.5" height="71.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzK-gv-mvb">
+                                                <rect key="frame" x="0.0" y="215" width="134" height="71.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Save Character"/>
+                                                <connections>
+                                                    <action selector="saveButton:" destination="LEA-EV-oUK" eventType="touchUpInside" id="c5F-4Y-K1b"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -102,8 +140,7 @@
                         <viewLayoutGuide key="safeArea" id="me7-gD-bYU"/>
                     </view>
                     <connections>
-                        <outlet property="ancestryLabel" destination="wKG-iq-3MY" id="Cjx-6q-O5Y"/>
-                        <outlet property="genderLabel" destination="EXH-lO-kAd" id="AGZ-pn-XGz"/>
+                        <outlet property="ancestryLabel" destination="EXH-lO-kAd" id="w5Z-ry-yIq"/>
                         <outlet property="houseLabel" destination="axV-9y-4oI" id="156-HI-9Be"/>
                         <outlet property="imageView" destination="tuc-qj-LOQ" id="Zmm-T8-LGw"/>
                         <outlet property="nameLabel" destination="5Fo-ag-RSH" id="cBn-L4-RP0"/>
@@ -121,9 +158,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Gmx-9U-MSu">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="181" id="kkP-DA-vAb" customClass="CharTableViewCell" customModule="NB_Database" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="181"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="181"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kkP-DA-vAb" id="Uol-PF-LXg">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="180.5"/>
@@ -142,14 +184,20 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HKs-Mb-1kc">
                                                     <rect key="frame" x="182.5" y="0.0" width="172.5" height="160.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkd-t4-5kb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="70.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkd-t4-5kb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="40"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzW-ff-dXU">
-                                                            <rect key="frame" x="0.0" y="90.5" width="172.5" height="70"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ancestry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdG-Iq-KiM">
+                                                            <rect key="frame" x="0.0" y="60" width="172.5" height="40.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzW-ff-dXU">
+                                                            <rect key="frame" x="0.0" y="120.5" width="172.5" height="40"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -171,6 +219,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="ancestryLabel" destination="JdG-Iq-KiM" id="fG9-P0-70h"/>
                                     <outlet property="charImageView" destination="CjF-zD-LOU" id="mlr-Uh-sVh"/>
                                     <outlet property="houseLabel" destination="YzW-ff-dXU" id="OD9-qX-fnP"/>
                                     <outlet property="nameLabel" destination="Rkd-t4-5kb" id="4sZ-XN-BDy"/>

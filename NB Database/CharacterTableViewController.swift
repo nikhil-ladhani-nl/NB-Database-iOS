@@ -13,7 +13,7 @@ import SwiftyJSON
 
 class CharacterTableViewController: UITableViewController {
 //array of characters
-    var charactersData = [Character]()
+    var charactersData = [PersonCharacter]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class CharacterTableViewController: UITableViewController {
                     json.array?.forEach({
                         (character) in
                         //pick specific attributes from the json array, display on table view
-                        let character = Character(name: character["name"].stringValue, house:character["house"].stringValue,image:character["image"].stringValue, gender: character["gender"].stringValue, ancestry: character["ancestry"].stringValue)
+                        let character = PersonCharacter(name: character["name"].stringValue, house:character["house"].stringValue,image:character["image"].stringValue, ancestry: character["ancestry"].stringValue)
                         //prints out content of characters
                         self.charactersData.append(character)
                     })
@@ -61,6 +61,7 @@ class CharacterTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharTableViewCell
     // displaying name & house in table view cell
         cell.nameLabel.text = "Name: " +  charactersData[indexPath.row].name
+        cell.ancestryLabel.text = "Ancestry: " +  charactersData[indexPath.row].ancestry
         cell.houseLabel.text = "House: " + charactersData[indexPath.row].house
         // displaying image in table view cell
         if let imageURL = URL(string: self.charactersData[indexPath.row].image) {
@@ -81,6 +82,7 @@ class CharacterTableViewController: UITableViewController {
         //passes data from table view cell into details view controller
         hpc?.imageUrlString = charactersData[indexPath.row].image
         hpc?.name = charactersData[indexPath.row].name
+        hpc?.ancestry = charactersData[indexPath.row].ancestry
         hpc?.house = charactersData[indexPath.row].house
         self.navigationController?.pushViewController(hpc!, animated: true)
     }

@@ -13,6 +13,7 @@ class CharTableViewCell: UITableViewCell {
     @IBOutlet weak var charImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var houseLabel: UILabel!
+    @IBOutlet weak var ancestryLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

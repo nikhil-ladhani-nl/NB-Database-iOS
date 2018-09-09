@@ -16,7 +16,7 @@
 		3106CAFC21423C3E00996736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3106CAFA21423C3E00996736 /* LaunchScreen.storyboard */; };
 		3106CB0721423C3E00996736 /* NB_DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106CB0621423C3E00996736 /* NB_DatabaseTests.swift */; };
 		3106CB1221423C3E00996736 /* NB_DatabaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106CB1121423C3E00996736 /* NB_DatabaseUITests.swift */; };
-		31FBB5DF21424E9E007CEC09 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5DE21424E9E007CEC09 /* Characters.swift */; };
+		3113F3522145D7FF00063EE9 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113F3512145D7FF00063EE9 /* CharacterModel.swift */; };
 		31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */; };
 		31FBB5F6214282F4007CEC09 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */; };
 		31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */; };
@@ -58,8 +58,8 @@
 		3106CB0D21423C3E00996736 /* NB DatabaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NB DatabaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3106CB1121423C3E00996736 /* NB_DatabaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NB_DatabaseUITests.swift; sourceTree = "<group>"; };
 		3106CB1321423C3E00996736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3113F3512145D7FF00063EE9 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		3190D0ED23027CF2C8F487E6 /* Pods-NB Database.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NB Database.release.xcconfig"; path = "Pods/Target Support Files/Pods-NB Database/Pods-NB Database.release.xcconfig"; sourceTree = "<group>"; };
-		31FBB5DE21424E9E007CEC09 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailsViewController.swift; sourceTree = "<group>"; };
 		31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewController.swift; sourceTree = "<group>"; };
@@ -130,11 +130,11 @@
 				3106CAFA21423C3E00996736 /* LaunchScreen.storyboard */,
 				3106CAFD21423C3E00996736 /* Info.plist */,
 				3106CAF521423C3B00996736 /* NB_Database.xcdatamodeld */,
-				31FBB5DE21424E9E007CEC09 /* Characters.swift */,
 				31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */,
 				F55B609A2143668300A7BC40 /* CharTableViewCell.swift */,
 				31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */,
 				31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */,
+				3113F3512145D7FF00063EE9 /* CharacterModel.swift */,
 			);
 			path = "NB Database";
 			sourceTree = "<group>";
@@ -400,7 +400,7 @@
 				31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */,
 				31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */,
 				3106CAEF21423C3B00996736 /* AppDelegate.swift in Sources */,
-				31FBB5DF21424E9E007CEC09 /* Characters.swift in Sources */,
+				3113F3522145D7FF00063EE9 /* CharacterModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

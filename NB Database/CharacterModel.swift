@@ -8,20 +8,18 @@
 
 import Foundation
 
-class Character
+class PersonCharacter
 {
     var name : String
     var house : String
     var image : String
-    var gender : String
     var ancestry : String
     
-    init(name: String, house: String, image: String, gender: String, ancestry: String)
+    init(name: String, house: String, image: String, ancestry: String)
     {
         self.name = name
         self.house = house
         self.image = image
         self.ancestry = ancestry
-        self.gender = gender
     }
 }
