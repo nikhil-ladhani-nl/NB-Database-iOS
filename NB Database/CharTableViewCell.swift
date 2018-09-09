@@ -9,7 +9,7 @@ import UIKit
 
 class CharTableViewCell: UITableViewCell {
 
-
+//outlets for UI
     @IBOutlet weak var charImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var houseLabel: UILabel!

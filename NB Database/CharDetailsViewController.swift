@@ -9,6 +9,7 @@
 import UIKit
 
 class CharDetailsViewController: UIViewController {
+    //outlets for UI
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
