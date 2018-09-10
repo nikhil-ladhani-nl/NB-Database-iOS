@@ -12,7 +12,8 @@ import SwiftyJSON
 
 
 class CharacterTableViewController: UITableViewController {
-//array of characters
+    
+    //Array of characters from a Model
     var charactersData = [PersonCharacter]()
     
     override func viewDidLoad() {
@@ -22,26 +23,31 @@ class CharacterTableViewController: UITableViewController {
 
     func loadData()
     {
-        //speeds up loading process
+        //Speeds up the Loading Process from a long queue
         DispatchQueue.main.async {
-            //fetching the data from the url
+            
+            //Fetching the Data from the url as JSON Format
             Alamofire.request("http://hp-api.herokuapp.com/api/characters").responseJSON(completionHandler: {
                 (response) in
                 switch response.result
                 {
-              //outcomes of switch
+                    
+              //Outcomes of switch like an advanced if function
                 case.success(let value):
                     let json = JSON(value)
                     print(json)
                     json.array?.forEach({
                         (character) in
-                        //pick specific attributes from the json array, display on table view
+                        
+                        //Pick specific attributes from the json array, display on table view
                         let character = PersonCharacter(name: character["name"].stringValue, house:character["house"].stringValue,image:character["image"].stringValue, ancestry: character["ancestry"].stringValue)
-                        //prints out content of characters
+                        
+                        //Prints out content of characters
                         self.charactersData.append(character)
                     })
                     //reloads table to display the data
                     self.tableView.reloadData()
+                    
                     //outcome of switch
                 case.failure(let error):
                     print(error.localizedDescription)
@@ -52,18 +58,20 @@ class CharacterTableViewController: UITableViewController {
     
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//sets rows in table view depending on entity amount
+        //Sets rows in table view depending on entity amount
         return charactersData.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharTableViewCell
-    // displaying name & house in table view cell
+        
+    // Displaying name & house in table view cell
         cell.nameLabel.text = "Name: " +  charactersData[indexPath.row].name
         cell.ancestryLabel.text = "Ancestry: " +  charactersData[indexPath.row].ancestry
         cell.houseLabel.text = "House: " + charactersData[indexPath.row].house
-        // displaying image in table view cell
+        
+        // Displaying image in table view cell
         if let imageURL = URL(string: self.charactersData[indexPath.row].image) {
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: imageURL)
@@ -77,9 +85,12 @@ class CharacterTableViewController: UITableViewController {
         }
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let hpc = storyboard?.instantiateViewController(withIdentifier: "CharDetails") as? CharDetailsViewController
-        //passes data from table view cell into details view controller
+        
+        //Passes data from table view cell into details view controller
         hpc?.imageUrlString = charactersData[indexPath.row].image
         hpc?.name = charactersData[indexPath.row].name
         hpc?.ancestry = charactersData[indexPath.row].ancestry

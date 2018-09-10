@@ -19,6 +19,7 @@
 		3113F3522145D7FF00063EE9 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113F3512145D7FF00063EE9 /* CharacterModel.swift */; };
 		3113F3562145F83200063EE9 /* SavedDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113F3552145F83200063EE9 /* SavedDataTableViewController.swift */; };
 		3113F3582145F89500063EE9 /* SavedDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113F3572145F89500063EE9 /* SavedDataTableViewCell.swift */; };
+		3113F35F214630FA00063EE9 /* SavedDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113F35E214630FA00063EE9 /* SavedDataViewController.swift */; };
 		31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */; };
 		31FBB5F6214282F4007CEC09 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */; };
 		31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */; };
@@ -63,6 +64,7 @@
 		3113F3512145D7FF00063EE9 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		3113F3552145F83200063EE9 /* SavedDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataTableViewController.swift; sourceTree = "<group>"; };
 		3113F3572145F89500063EE9 /* SavedDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataTableViewCell.swift; sourceTree = "<group>"; };
+		3113F35E214630FA00063EE9 /* SavedDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewController.swift; sourceTree = "<group>"; };
 		3190D0ED23027CF2C8F487E6 /* Pods-NB Database.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NB Database.release.xcconfig"; path = "Pods/Target Support Files/Pods-NB Database/Pods-NB Database.release.xcconfig"; sourceTree = "<group>"; };
 		31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailsViewController.swift; sourceTree = "<group>"; };
 		31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -130,17 +132,14 @@
 			children = (
 				3106CAEE21423C3B00996736 /* AppDelegate.swift */,
 				3106CAF221423C3B00996736 /* Main.storyboard */,
+				31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */,
+				3113F35D2146302A00063EE9 /* Model */,
+				3113F35C2146301100063EE9 /* Saved Characters */,
+				3113F35B21462FF500063EE9 /* Add New Character */,
 				3106CAF821423C3E00996736 /* Assets.xcassets */,
 				3106CAFA21423C3E00996736 /* LaunchScreen.storyboard */,
 				3106CAFD21423C3E00996736 /* Info.plist */,
 				3106CAF521423C3B00996736 /* NB_Database.xcdatamodeld */,
-				31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */,
-				F55B609A2143668300A7BC40 /* CharTableViewCell.swift */,
-				31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */,
-				31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */,
-				3113F3552145F83200063EE9 /* SavedDataTableViewController.swift */,
-				3113F3512145D7FF00063EE9 /* CharacterModel.swift */,
-				3113F3572145F89500063EE9 /* SavedDataTableViewCell.swift */,
 			);
 			path = "NB Database";
 			sourceTree = "<group>";
@@ -161,6 +160,34 @@
 				3106CB1321423C3E00996736 /* Info.plist */,
 			);
 			path = "NB DatabaseUITests";
+			sourceTree = "<group>";
+		};
+		3113F35B21462FF500063EE9 /* Add New Character */ = {
+			isa = PBXGroup;
+			children = (
+				31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */,
+				F55B609A2143668300A7BC40 /* CharTableViewCell.swift */,
+				31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */,
+			);
+			path = "Add New Character";
+			sourceTree = "<group>";
+		};
+		3113F35C2146301100063EE9 /* Saved Characters */ = {
+			isa = PBXGroup;
+			children = (
+				3113F3552145F83200063EE9 /* SavedDataTableViewController.swift */,
+				3113F3572145F89500063EE9 /* SavedDataTableViewCell.swift */,
+				3113F35E214630FA00063EE9 /* SavedDataViewController.swift */,
+			);
+			path = "Saved Characters";
+			sourceTree = "<group>";
+		};
+		3113F35D2146302A00063EE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3113F3512145D7FF00063EE9 /* CharacterModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4C611936761676982023E62C /* Pods */ = {
@@ -404,6 +431,7 @@
 				31FBB5F6214282F4007CEC09 /* MainPageViewController.swift in Sources */,
 				F55B609B2143668300A7BC40 /* CharTableViewCell.swift in Sources */,
 				31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */,
+				3113F35F214630FA00063EE9 /* SavedDataViewController.swift in Sources */,
 				3113F3582145F89500063EE9 /* SavedDataTableViewCell.swift in Sources */,
 				31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */,
 				3113F3562145F83200063EE9 /* SavedDataTableViewController.swift in Sources */,
