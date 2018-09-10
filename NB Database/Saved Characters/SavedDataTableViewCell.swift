@@ -16,20 +16,8 @@ class SavedDataTableViewCell: UITableViewCell {
     @IBOutlet weak var ancestryLabel: UILabel!
     @IBOutlet weak var houseLabel: UILabel!
     
-    //Variables
-    var getImage = UIImage()
-    var name = String()
-    var house = String()
-    var ancestry = String()
-    var imageUrlString = String()
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        charImageView.image = getImage
-        nameLabel.text! = name
-        houseLabel.text! = house
-        ancestryLabel.text! = ancestry
         
     }
 

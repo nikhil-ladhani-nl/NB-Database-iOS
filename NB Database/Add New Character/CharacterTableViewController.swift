@@ -107,6 +107,7 @@ class CharacterTableViewController: UITableViewController, UISearchBarDelegate {
         self.navigationController?.pushViewController(hpc!, animated: true)
     }
     
+    //Search Functions
     func alterLayout()
     {
         definesPresentationContext = true

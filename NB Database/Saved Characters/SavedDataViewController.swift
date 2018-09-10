@@ -43,7 +43,9 @@ class SavedDataViewController: UIViewController {
                     }
                 }
             }
-        }    }
+        }
+        
+    }
     
         var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 

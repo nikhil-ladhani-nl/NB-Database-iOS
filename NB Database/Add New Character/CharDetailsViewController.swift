@@ -62,14 +62,18 @@ class CharDetailsViewController: UIViewController {
     
     //Saving the JSON Data in Core Data
     @IBAction func saveButton(_ sender: UIButton) {
-        
+    
         let entity = NSEntityDescription.entity(forEntityName: "SavedCharacters", in: context)
         let newPersonCharacter = NSManagedObject(entity: entity!, insertInto: context)
         
         newPersonCharacter.setValue(name, forKey: "name")
         newPersonCharacter.setValue(ancestry, forKey: "ancestry")
         newPersonCharacter.setValue(house, forKey: "house")
-
+        
+        newPersonCharacter.setValue(imageUrlString, forKey: "image")
+        
+        print(newPersonCharacter)
+        
         do{
             try context.save()
             showMessage("Character Saved Successfully","Success", self)

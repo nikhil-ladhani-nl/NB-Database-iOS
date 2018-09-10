@@ -13,7 +13,7 @@ class SavedDataTableViewController: UITableViewController {
 
     //Array Variables
     var charData = [SavedCharacters]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,8 +34,10 @@ class SavedDataTableViewController: UITableViewController {
             let result = try? context.fetch(request)
             for data in result as! [NSManagedObject]
             {
+
             //Show output data on the device
             charData.append(data as! SavedCharacters)
+                print(data)
             }
         }
         tableView.reloadData()
@@ -57,8 +59,20 @@ class SavedDataTableViewController: UITableViewController {
         cell.nameLabel.text = char.name!
         cell.houseLabel.text = char.house!
         cell.ancestryLabel.text = char.ancestry!
-//        cell.charImageView.image = char.image!
-
+    
+        // Displaying image in table view cell
+        if let imageURL = URL(string: self.charData[indexPath.row].image!) {
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageURL)
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        cell.charImageView.image = image
+                    }
+                }
+            }
+        }
+        
         return cell
     }
     
@@ -66,8 +80,8 @@ class SavedDataTableViewController: UITableViewController {
         let hpsc = storyboard?.instantiateViewController(withIdentifier: "SavedDetails") as? SavedDataViewController
         
         //Passes data from table view cell into details view controller
-//        hpsc?.imageUrlString = charData[indexPath.row].image!
-        hpsc?.name = "Name: " + charData[indexPath.row].name!
+        hpsc?.imageUrlString = charData[indexPath.row].image!
+        hpsc?.name = charData[indexPath.row].name!
         hpsc?.ancestry = "Ancestry: " + charData[indexPath.row].ancestry!
         hpsc?.house = "House: " + charData[indexPath.row].house!
         
