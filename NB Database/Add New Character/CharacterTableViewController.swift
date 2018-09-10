@@ -92,9 +92,9 @@ class CharacterTableViewController: UITableViewController {
         
         //Passes data from table view cell into details view controller
         hpc?.imageUrlString = charactersData[indexPath.row].image
-        hpc?.name = charactersData[indexPath.row].name
-        hpc?.ancestry = charactersData[indexPath.row].ancestry
-        hpc?.house = charactersData[indexPath.row].house
+        hpc?.name = "Name: " + charactersData[indexPath.row].name
+        hpc?.ancestry = "Ancestry: " + charactersData[indexPath.row].ancestry
+        hpc?.house = "House: " + charactersData[indexPath.row].house
         self.navigationController?.pushViewController(hpc!, animated: true)
     }
 

@@ -67,9 +67,9 @@ class SavedDataTableViewController: UITableViewController {
         
         //Passes data from table view cell into details view controller
 //        hpsc?.imageUrlString = charData[indexPath.row].image!
-        hpsc?.name = "Name" + charData[indexPath.row].name!
-        hpsc?.ancestry = "Ancestry" + charData[indexPath.row].ancestry!
-        hpsc?.house = "House" + charData[indexPath.row].house!
+        hpsc?.name = charData[indexPath.row].name!
+        hpsc?.ancestry = charData[indexPath.row].ancestry!
+        hpsc?.house = charData[indexPath.row].house!
         
         self.navigationController?.pushViewController(hpsc!, animated: true)
     }
