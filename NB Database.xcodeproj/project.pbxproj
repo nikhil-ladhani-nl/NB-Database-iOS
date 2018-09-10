@@ -17,6 +17,8 @@
 		3106CB0721423C3E00996736 /* NB_DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106CB0621423C3E00996736 /* NB_DatabaseTests.swift */; };
 		3106CB1221423C3E00996736 /* NB_DatabaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106CB1121423C3E00996736 /* NB_DatabaseUITests.swift */; };
 		3113F3522145D7FF00063EE9 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113F3512145D7FF00063EE9 /* CharacterModel.swift */; };
+		3113F3562145F83200063EE9 /* SavedDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113F3552145F83200063EE9 /* SavedDataTableViewController.swift */; };
+		3113F3582145F89500063EE9 /* SavedDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113F3572145F89500063EE9 /* SavedDataTableViewCell.swift */; };
 		31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */; };
 		31FBB5F6214282F4007CEC09 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */; };
 		31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */; };
@@ -59,6 +61,8 @@
 		3106CB1121423C3E00996736 /* NB_DatabaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NB_DatabaseUITests.swift; sourceTree = "<group>"; };
 		3106CB1321423C3E00996736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3113F3512145D7FF00063EE9 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		3113F3552145F83200063EE9 /* SavedDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataTableViewController.swift; sourceTree = "<group>"; };
+		3113F3572145F89500063EE9 /* SavedDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataTableViewCell.swift; sourceTree = "<group>"; };
 		3190D0ED23027CF2C8F487E6 /* Pods-NB Database.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NB Database.release.xcconfig"; path = "Pods/Target Support Files/Pods-NB Database/Pods-NB Database.release.xcconfig"; sourceTree = "<group>"; };
 		31FBB5F121426C07007CEC09 /* CharDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailsViewController.swift; sourceTree = "<group>"; };
 		31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +138,9 @@
 				F55B609A2143668300A7BC40 /* CharTableViewCell.swift */,
 				31FBB5F5214282F4007CEC09 /* MainPageViewController.swift */,
 				31FBB5F721428BA8007CEC09 /* CharacterTableViewController.swift */,
+				3113F3552145F83200063EE9 /* SavedDataTableViewController.swift */,
 				3113F3512145D7FF00063EE9 /* CharacterModel.swift */,
+				3113F3572145F89500063EE9 /* SavedDataTableViewCell.swift */,
 			);
 			path = "NB Database";
 			sourceTree = "<group>";
@@ -398,7 +404,9 @@
 				31FBB5F6214282F4007CEC09 /* MainPageViewController.swift in Sources */,
 				F55B609B2143668300A7BC40 /* CharTableViewCell.swift in Sources */,
 				31FBB5F221426C07007CEC09 /* CharDetailsViewController.swift in Sources */,
+				3113F3582145F89500063EE9 /* SavedDataTableViewCell.swift in Sources */,
 				31FBB5F821428BA8007CEC09 /* CharacterTableViewController.swift in Sources */,
+				3113F3562145F83200063EE9 /* SavedDataTableViewController.swift in Sources */,
 				3106CAEF21423C3B00996736 /* AppDelegate.swift in Sources */,
 				3113F3522145D7FF00063EE9 /* CharacterModel.swift in Sources */,
 			);

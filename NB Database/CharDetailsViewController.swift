@@ -50,22 +50,19 @@ class CharDetailsViewController: UIViewController {
 
     @IBAction func saveButton(_ sender: UIButton) {
         
-        if nameLabel.text != ""{
-        let newCharacter = NSEntityDescription.insertNewObject(forEntityName: "name", into: context)
+        let entity = NSEntityDescription.entity(forEntityName: "PersonCharacte", in: context)
+        let newPersonCharacter = NSManagedObject(entity: entity!, insertInto: context)
         
-            newCharacter.setValue(self.nameLabel.text!, forKey: "name")
-            
-            do{
-                try context.save()
-            }
-            catch{
-                print(error)
-            }
+        newPersonCharacter.setValue(name, forKey: "name")
+        newPersonCharacter.setValue(ancestry, forKey: "ancestry")
+        newPersonCharacter.setValue(house, forKey: "house")
+        
+        do{
+            try context.save()
+            print("Saved")
         }
-        
-        else{
-            print("Not Saved")
+        catch{
+          print("Save Failed")
         }
     }
-    
 }
