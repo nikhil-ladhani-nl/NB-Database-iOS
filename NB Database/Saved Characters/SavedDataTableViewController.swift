@@ -79,7 +79,7 @@ class SavedDataTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let hpsc = storyboard?.instantiateViewController(withIdentifier: "SavedDetails") as? SavedDataViewController
         
-        //Passes data from table view cell into details view controller
+        //Passes data from table view cell into details view controller of the stored core data
         hpsc?.imageUrlString = charData[indexPath.row].image!
         hpsc?.name = charData[indexPath.row].name!
         hpsc?.ancestry = "Ancestry: " + charData[indexPath.row].ancestry!
