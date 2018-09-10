@@ -11,14 +11,22 @@ import Alamofire
 import SwiftyJSON
 
 
-class CharacterTableViewController: UITableViewController {
+class CharacterTableViewController: UITableViewController, UISearchBarDelegate {
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var table: UITableView!
     
     //Array of characters from a Model
     var charactersData = [PersonCharacter]()
+    var filteredCharacters = [PersonCharacter]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        setUpSearchBar()
+        alterLayout()
+    }
+    private func array(){
+        filteredCharacters = charactersData
     }
 
     func loadData()
@@ -59,7 +67,8 @@ class CharacterTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Sets rows in table view depending on entity amount
-        return charactersData.count
+        
+        return filteredCharacters.count
     }
 
     
@@ -67,12 +76,12 @@ class CharacterTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharTableViewCell
         
     // Displaying name & house in table view cell
-        cell.nameLabel.text = "Name: " +  charactersData[indexPath.row].name
-        cell.ancestryLabel.text = "Ancestry: " +  charactersData[indexPath.row].ancestry
-        cell.houseLabel.text = "House: " + charactersData[indexPath.row].house
+        cell.nameLabel.text = "Name: " +  filteredCharacters[indexPath.row].name
+        cell.ancestryLabel.text = "Ancestry: " +  filteredCharacters[indexPath.row].ancestry
+        cell.houseLabel.text = "House: " + filteredCharacters[indexPath.row].house
         
         // Displaying image in table view cell
-        if let imageURL = URL(string: self.charactersData[indexPath.row].image) {
+        if let imageURL = URL(string: self.filteredCharacters[indexPath.row].image) {
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: imageURL)
                 if let data = data {
@@ -91,12 +100,31 @@ class CharacterTableViewController: UITableViewController {
         let hpc = storyboard?.instantiateViewController(withIdentifier: "CharDetails") as? CharDetailsViewController
         
         //Passes data from table view cell into details view controller
-        hpc?.imageUrlString = charactersData[indexPath.row].image
-        hpc?.name = charactersData[indexPath.row].name
-        hpc?.ancestry = charactersData[indexPath.row].ancestry
-        hpc?.house = charactersData[indexPath.row].house
+        hpc?.imageUrlString = filteredCharacters[indexPath.row].image
+        hpc?.name = filteredCharacters[indexPath.row].name
+        hpc?.ancestry = filteredCharacters[indexPath.row].ancestry
+        hpc?.house = filteredCharacters[indexPath.row].house
         self.navigationController?.pushViewController(hpc!, animated: true)
     }
-
+    func alterLayout()
+    {
+        definesPresentationContext = true
+        searchBar.placeholder = "Enter detail you want to search by"
+        tableView.tableHeaderView = searchBar
+    }
+    func setUpSearchBar()
+    {
+        searchBar.delegate = self
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            filteredCharacters = charactersData
+            table.reloadData()
+            return }
+        filteredCharacters = charactersData.filter({ personCharacter -> Bool in
+            personCharacter.name.lowercased().contains(searchText.lowercased())||personCharacter.house.lowercased().contains(searchText.lowercased())||personCharacter.ancestry.lowercased().contains(searchText.lowercased())
+        })
+        table.reloadData()
+    }
 
 }

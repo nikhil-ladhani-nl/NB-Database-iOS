@@ -70,7 +70,6 @@ class CharDetailsViewController: UIViewController {
         newPersonCharacter.setValue(ancestry, forKey: "ancestry")
         newPersonCharacter.setValue(house, forKey: "house")
 
-        newPersonCharacter.setValue(SavedCharacters(), forKey: "Saved Characters")
         do{
             try context.save()
             showMessage("Character Saved Successfully","Success", self)
