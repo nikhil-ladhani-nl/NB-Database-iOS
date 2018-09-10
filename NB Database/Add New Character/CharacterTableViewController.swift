@@ -106,6 +106,7 @@ class CharacterTableViewController: UITableViewController, UISearchBarDelegate {
         hpc?.house = filteredCharacters[indexPath.row].house
         self.navigationController?.pushViewController(hpc!, animated: true)
     }
+    
     func alterLayout()
     {
         definesPresentationContext = true
